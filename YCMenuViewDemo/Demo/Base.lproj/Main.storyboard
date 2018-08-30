@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mnB-mr-yRr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="TFr-Tk-Cm9">
+            <objects>
+                <viewController id="8RN-OU-PFQ" customClass="TestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ole-HI-F6Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="VnO-gT-UA4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aFF-JF-cMI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqe-mL-sZL">
+                                <rect key="frame" x="0.0" y="89" width="103" height="59"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="W5u-Kw-SGj"/>
+                                    <constraint firstAttribute="width" constant="103" id="rcv-wg-hoU"/>
+                                </constraints>
+                                <state key="normal" title="点击按钮1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button1Click:" destination="8RN-OU-PFQ" eventType="touchUpInside" id="d7w-bt-L5I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knM-vp-oiI">
+                                <rect key="frame" x="212" y="535" width="103" height="59"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="7V1-tJ-Z4F"/>
+                                    <constraint firstAttribute="width" constant="103" id="7kZ-6l-6s9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="59" id="hLB-gi-Ex8"/>
+                                    <constraint firstAttribute="height" constant="59" id="sxW-K4-oar"/>
+                                </constraints>
+                                <state key="normal" title="点击按钮3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3Click:" destination="8RN-OU-PFQ" eventType="touchUpInside" id="1OU-t4-wy1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwS-kD-9KL">
+                                <rect key="frame" x="272" y="211" width="103" height="59"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="ENa-ff-Ofa"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="103" id="KKI-b7-rhZ"/>
+                                    <constraint firstAttribute="width" constant="103" id="LOv-WE-vc4"/>
+                                    <constraint firstAttribute="height" constant="59" id="Tuz-PH-2aq"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="59" id="WgR-il-l6B"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="59" id="h2D-sj-XvF"/>
+                                </constraints>
+                                <state key="normal" title="点击按钮2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button2Click:" destination="8RN-OU-PFQ" eventType="touchUpInside" id="yEE-Uv-LQ6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="knM-vp-oiI" secondAttribute="trailing" constant="60" id="9sr-VH-IqG"/>
+                            <constraint firstItem="aqe-mL-sZL" firstAttribute="top" secondItem="ole-HI-F6Y" secondAttribute="bottom" constant="25" id="HE6-QA-4SN"/>
+                            <constraint firstItem="VnO-gT-UA4" firstAttribute="top" secondItem="knM-vp-oiI" secondAttribute="bottom" constant="73" id="P9c-op-Low"/>
+                            <constraint firstItem="aqe-mL-sZL" firstAttribute="leading" secondItem="aFF-JF-cMI" secondAttribute="leading" id="s57-cc-pbw"/>
+                            <constraint firstAttribute="trailing" secondItem="SwS-kD-9KL" secondAttribute="trailing" id="tqg-2P-gJq"/>
+                            <constraint firstItem="SwS-kD-9KL" firstAttribute="top" secondItem="ole-HI-F6Y" secondAttribute="bottom" constant="147" id="zjL-2r-oYR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wKO-Q8-MDa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nat-ll-kZD">
+                        <barButtonItem key="rightBarButtonItem" title="菜单" id="KrR-R9-H2t">
+                            <connections>
+                                <action selector="buttonItemClick:" destination="8RN-OU-PFQ" id="NGv-vh-K0T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mt-yr-ecw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="322"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="me1-V0-CbB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mnB-mr-yRr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mpu-MJ-iXB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8RN-OU-PFQ" kind="relationship" relationship="rootViewController" id="TOa-Cr-i7b"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhq-Qm-8ey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="323"/>
+        </scene>
+    </scenes>
+</document>
