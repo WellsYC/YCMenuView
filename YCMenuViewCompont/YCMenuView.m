@@ -4,7 +4,8 @@
 //
 //  Created by 蔡亚超 on 2018/8/28.
 //  Copyright © 2018年 WellsCai. All rights reserved.
-//
+//  github地址：https://github.com/WellsYC/YCMenuView
+//  简书地址：https://www.jianshu.com/u/f853cbc68abb
 
 
 #define kScreenWidth               [UIScreen mainScreen].bounds.size.width
