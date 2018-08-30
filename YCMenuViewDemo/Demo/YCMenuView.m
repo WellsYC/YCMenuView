@@ -291,10 +291,10 @@ static NSString *const menuCellID = @"YCMenuCell";
     [UIView animateWithDuration: kAnimationTime animations:^{
         self.layer.affineTransform = CGAffineTransformMakeScale(0.1, 0.1);
         self.alpha = 0.0f;
-        _bgView.alpha = 0.0f;
+        self.bgView.alpha = 0.0f;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
-        [_bgView removeFromSuperview];
+        [self.bgView removeFromSuperview];
         self.actions = nil;
     }];
 }
