@@ -296,7 +296,6 @@ static NSString *const menuCellID = @"YCMenuCell";
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
         [self.bgView removeFromSuperview];
-        self.actions = nil;
     }];
 }
 
