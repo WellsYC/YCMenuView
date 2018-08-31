@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "YCMenuView"
-s.version      = "1.0.0"
+s.version      = "1.1.0"
 s.ios.deployment_target = '8.0'
 s.summary      = "a popup menu which can be highly customized."
 s.homepage     = "https://github.com/WellsYC/YCMenuView"
