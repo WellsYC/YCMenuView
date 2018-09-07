@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwS-kD-9KL">
-                                <rect key="frame" x="272" y="211" width="103" height="59"/>
+                                <rect key="frame" x="272" y="65" width="103" height="59"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="ENa-ff-Ofa"/>
@@ -78,7 +78,7 @@
                             <constraint firstItem="VnO-gT-UA4" firstAttribute="top" secondItem="knM-vp-oiI" secondAttribute="bottom" constant="73" id="P9c-op-Low"/>
                             <constraint firstItem="aqe-mL-sZL" firstAttribute="leading" secondItem="aFF-JF-cMI" secondAttribute="leading" id="s57-cc-pbw"/>
                             <constraint firstAttribute="trailing" secondItem="SwS-kD-9KL" secondAttribute="trailing" id="tqg-2P-gJq"/>
-                            <constraint firstItem="SwS-kD-9KL" firstAttribute="top" secondItem="ole-HI-F6Y" secondAttribute="bottom" constant="147" id="zjL-2r-oYR"/>
+                            <constraint firstItem="SwS-kD-9KL" firstAttribute="top" secondItem="ole-HI-F6Y" secondAttribute="bottom" constant="1" id="zjL-2r-oYR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wKO-Q8-MDa"/>
                     </view>

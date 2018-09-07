@@ -34,7 +34,7 @@
         NSLog(@"点击了%@",action.title);
     }];
     
-    self.arr = @[action,action1,action2,action3,action4];
+    self.arr = @[action,action1,action2,action3,action4,action,action1,action2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,11 +52,11 @@
     // 自定义设置
 //    view.menuColor = [UIColor whiteColor];
 //    view.separatorColor = [UIColor whiteColor];
-//    view.maxDisplayCount = 5;
+    view.maxDisplayCount = 20;
 //    view.offset = 0;
 //    view.textColor = [UIColor whiteColor];
 //    view.textFont = [UIFont boldSystemFontOfSize:18];
-//    view.menuCellHeight = 60;
+    view.menuCellHeight = 60;
 //    view.dismissOnselected = YES;
 //    view.dismissOnTouchOutside = YES;
 
@@ -67,20 +67,28 @@
 }
 - (IBAction)buttonItemClick:(UIBarButtonItem *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
+    view.maxDisplayCount = 10;
+
     [view show];
 
     
 }
 - (IBAction)button1Click:(UIButton *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
+    view.maxDisplayCount = 10;
+
     [view show];
 }
 - (IBAction)button2Click:(UIButton *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
+    view.maxDisplayCount = 10;
+
     [view show];
 }
 - (IBAction)button3Click:(UIButton *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
+    view.maxDisplayCount = 10;
+
     [view show];
 }
 
