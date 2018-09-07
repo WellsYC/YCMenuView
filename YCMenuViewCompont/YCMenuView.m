@@ -263,7 +263,8 @@ static NSString *const menuCellID = @"YCMenuCell";
 - (CGPoint)getRefPoint{
     CGRect absoluteRect = [_refView convertRect:_refView.bounds toView:kMainWindow];
     CGPoint refPoint;
-    if (absoluteRect.origin.y + absoluteRect.size.height + _actions.count * _menuCellHeight > kScreenHeight - 10) {
+    CGFloat menuHeight = (_actions.count > _maxDisplayCount) ? _maxDisplayCount * _menuCellHeight + kArrowHeight: _actions.count * _menuCellHeight + kArrowHeight;
+    if (absoluteRect.origin.y + absoluteRect.size.height +  menuHeight > kScreenHeight - 10) {
         refPoint = CGPointMake(absoluteRect.origin.x + absoluteRect.size.width / 2, absoluteRect.origin.y);
         _isReverse = YES;
     }else{
