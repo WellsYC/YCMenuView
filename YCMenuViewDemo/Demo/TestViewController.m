@@ -10,6 +10,7 @@
 #import "YCMenuView.h"
 @interface TestViewController ()
 @property(nonatomic,strong)NSArray      *arr;
+@property(nonatomic,strong)YCMenuView   *mView;
 @end
 
 @implementation TestViewController
@@ -48,17 +49,18 @@
     
     // 创建
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 atPoint:P];
-
+    self.mView = view;
+    
     // 自定义设置
-//    view.menuColor = [UIColor whiteColor];
-//    view.separatorColor = [UIColor whiteColor];
+    view.menuColor = [UIColor whiteColor];
+    view.separatorColor = [UIColor whiteColor];
     view.maxDisplayCount = 20;
-//    view.offset = 0;
-//    view.textColor = [UIColor whiteColor];
-//    view.textFont = [UIFont boldSystemFontOfSize:18];
-    view.menuCellHeight = 60;
-//    view.dismissOnselected = YES;
-//    view.dismissOnTouchOutside = YES;
+    view.offset = 100;
+    view.textColor = [UIColor blueColor];
+    view.textFont = [UIFont boldSystemFontOfSize:18];
+    view.menuCellHeight = 50;
+    view.dismissOnselected = YES;
+    view.dismissOnTouchOutside = YES;
 
     // 显示
     [view show];
@@ -67,27 +69,28 @@
 }
 - (IBAction)buttonItemClick:(UIBarButtonItem *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
-    view.maxDisplayCount = 10;
+    view.maxDisplayCount = 7;
 
     [view show];
 
+    self.mView = view;
     
 }
 - (IBAction)button1Click:(UIButton *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
-    view.maxDisplayCount = 10;
+    view.maxDisplayCount = 7;
 
     [view show];
 }
 - (IBAction)button2Click:(UIButton *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
-    view.maxDisplayCount = 10;
+    view.maxDisplayCount = 7;
 
     [view show];
 }
 - (IBAction)button3Click:(UIButton *)sender {
     YCMenuView *view = [YCMenuView menuWithActions:self.arr width:140 relyonView:sender];
-    view.maxDisplayCount = 10;
+    view.maxDisplayCount = 8;
 
     [view show];
 }

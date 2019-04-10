@@ -282,7 +282,7 @@ static NSString *const menuCellID = @"YCMenuCell";
     [kMainWindow addSubview: self];
     self.layer.affineTransform = CGAffineTransformMakeScale(0.1, 0.1);
     [UIView animateWithDuration: kAnimationTime animations:^{
-        self.layer.affineTransform = CGAffineTransformMakeScale(1.0, 1.0);
+        self.layer.affineTransform = CGAffineTransformIdentity;
         self.alpha = 1.0f;
         self.bgView.alpha = 1.0f;
     }];
@@ -295,6 +295,7 @@ static NSString *const menuCellID = @"YCMenuCell";
         self.alpha = 0.0f;
         self.bgView.alpha = 0.0f;
     } completion:^(BOOL finished) {
+        self.layer.affineTransform = CGAffineTransformIdentity;
         [self removeFromSuperview];
         [self.bgView removeFromSuperview];
     }];
@@ -524,11 +525,12 @@ static NSString *const menuCellID = @"YCMenuCell";
     [self.tableView reloadData];
 }
 - (void)setOffset:(CGFloat)offset{
-    if (offset == offset) return;
+    if (_offset == offset) return;
     _offset = offset;
-    if (offset < 0.0f) {
-        offset = 0.0f;
+    if (_offset < 0.0f) {
+        _offset = 0.0f;
     }
-    self.y += self.y >= _refPoint.y ? offset : -offset;
+    self.y += self.y >= _refPoint.y ? _offset : -_offset;
 }
+
 @end
