@@ -41,6 +41,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -53,7 +55,7 @@
     
     // 自定义设置
     view.menuColor = [UIColor whiteColor];
-    view.separatorColor = [UIColor whiteColor];
+    view.separatorColor = [UIColor blueColor];
     view.maxDisplayCount = 20;
     view.offset = 100;
     view.textColor = [UIColor blueColor];
@@ -61,7 +63,8 @@
     view.menuCellHeight = 50;
     view.dismissOnselected = YES;
     view.dismissOnTouchOutside = YES;
-
+    view.backgroundColor = [UIColor redColor];
+    
     // 显示
     [view show];
     

@@ -117,21 +117,22 @@
 
 @interface YCMenuCell : UITableViewCell
 @property (nonatomic,assign) BOOL         isShowSeparator;
-@property (nonatomic,strong) UIColor    * separatorColor;
+@property (nonatomic,strong) UIColor    * separatorLineColor;
 @end
 @implementation YCMenuCell
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         _isShowSeparator = YES;
-        _separatorColor = [UIColor lightGrayColor];
+        _separatorLineColor = [UIColor lightGrayColor];
     }
     return self;
 }
 
-- (void)setSeparatorColor:(UIColor *)separatorColor{
-    _separatorColor = separatorColor;
+- (void)setSeparatorLineColor:(UIColor *)separatorLineColor{
+    _separatorLineColor = separatorLineColor;
     [self setNeedsDisplay];
 }
+
 - (void)setIsShowSeparator:(BOOL)isShowSeparator{
     _isShowSeparator = isShowSeparator;
     [self setNeedsDisplay];
@@ -139,7 +140,7 @@
 - (void)drawRect:(CGRect)rect{
     if (!_isShowSeparator)return;
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, rect.size.height - 0.5, rect.size.width, 0.5)];
-    [_separatorColor setFill];
+    [_separatorLineColor setFill];
     [path fillWithBlendMode:kCGBlendModeNormal alpha:1.0f];
     [path closePath];
 }
@@ -233,7 +234,8 @@ static NSString *const menuCellID = @"YCMenuCell";
     [self setDefaultShadow];
     
     _cornerRaius = 5.0f;
-    _separatorColor = [UIColor blackColor];
+    _separatorColor = [UIColor lightGrayColor];
+
     _menuColor = [UIColor whiteColor];
     _menuCellHeight = 44.0f;
     _maxDisplayCount = 5;
@@ -420,7 +422,8 @@ static NSString *const menuCellID = @"YCMenuCell";
     cell.textLabel.font = _textFont;
     cell.textLabel.textColor = _textColor;
     cell.textLabel.text = action.title;
-    cell.separatorColor = _separatorColor;
+
+    cell.separatorLineColor = _separatorColor;
     cell.imageView.image = action.image?action.image:nil;
     
     if (indexPath.row == _actions.count - 1) {
